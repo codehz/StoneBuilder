@@ -9,5 +9,5 @@ RUN echo '[multilib]' >> /etc/pacman.conf && \
   su abuilder -c 'cd; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg' && \
   (cd /home/abuilder/yay; pacman -U *.pkg.tar --noprogressbar --noconfirm) && \
   rm -rf /home/abuilder/yay && \
-  su abuilder -c 'cd; yay -Syyu proot-bin conan --noprogressbar --noconfirm --noeditmenu'
+  su abuilder -c 'cd; yay -Syyu proot-bin docker --noprogressbar --noconfirm --noeditmenu'
 
